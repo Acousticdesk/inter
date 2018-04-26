@@ -242,4 +242,4 @@
   UI.killDefaultDragDrop();
 
   Ad.create();
-})();
+});

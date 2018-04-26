@@ -4,6 +4,8 @@ const path = require('path');
 module.exports = {
   entry: conf.paths.js.app,
   output: {
+    library: 'DIOInt',
+    libraryTarget: 'umd',
     path: path.join(__dirname, 'dist'),
     filename: 'bundle.js'
   },
