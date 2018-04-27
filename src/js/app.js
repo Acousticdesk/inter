@@ -1,5 +1,11 @@
-module.exports = (function () {
+// TODO: Use ES6 syntax
+// TODO: Encapsulate logic to modules
+module.exports = (function (containerSelector, type, mock) {
   'use strict';
+  
+  var mainTemplate = require('../templates/main.html');
+  var styles = require('../css/styles.css');
+  var alternativeTemplate = require('../templates/alternative.html');
 
   // var IMAGES = [
   //   "[[{"type":"banner","width":320,"height":480}]]",
@@ -8,14 +14,24 @@ module.exports = (function () {
   // ];
   // var TITLE = "[[{"type":"title"}]]";
   // var RATING = "[[{"type":"rating"}]]";
-  var IMAGES = [
-    'http://wallpaperstock.net/banner-peak_wallpapers_27665_320x480.jpg',
-    'http://wallpaperstock.net/banner-peak_wallpapers_27665_320x480.jpg',
-    'http://wallpaperstock.net/banner-peak_wallpapers_27665_320x480.jpg'
-
-  ];
-  var TITLE = 'Hello world!';
-  var RATING = 3;
+  var createDataFromMock = function (mock) {
+    return mock;
+  };
+  var getData = function (mock) {
+    if (mock) return createDataFromMock();
+    
+    return {
+      images: [
+        'http://wallpaperstock.net/banner-peak_wallpapers_27665_320x480.jpg',
+        'http://wallpaperstock.net/banner-peak_wallpapers_27665_320x480.jpg',
+        'http://wallpaperstock.net/banner-peak_wallpapers_27665_320x480.jpg'
+      ],
+      title: 'Hello world!',
+      rating: 3
+    };
+  };
+  
+  var data = getData(mock);
 
   var helpers = {
     DOMCollectionApply: function (domCollection, cb) {
@@ -57,18 +73,18 @@ module.exports = (function () {
     },
     initBanner: function () {
       helpers.DOMCollectionApply(this.el.querySelectorAll('.info__img'), function (image) {
-        image.src = IMAGES[0];
+        image.src = data.images[0];
       });
     },
     applyTitle: function () {
       helpers.DOMCollectionApply(this.el.querySelectorAll('.info__text'), function (titleEl) {
-        titleEl.textContent = TITLE;
+        titleEl.textContent = data.title;
       });
     },
     applyRating: function () {
       helpers.DOMCollectionApply(this.el.querySelectorAll('[data-rating]'), function (starEl) {
         starEl.classList.remove(this.enums.STAR_CHECKED_CLASS);
-        if ( window.parseInt(starEl.dataset.rating) <= RATING ) {
+        if ( window.parseInt(starEl.dataset.rating) <= data.rating ) {
           starEl.classList.add(this.enums.STAR_CHECKED_CLASS);
         }
       }.bind(this))
@@ -76,8 +92,24 @@ module.exports = (function () {
     show: function () {
       this.el.style.opacity = 1;
     },
-    create: function () {
-      this.el = document.querySelector('.ad__container');
+    getTemplate: function (type) {
+      switch (type) {
+        case 'main':
+          return mainTemplate;
+        default:
+          return alternativeTemplate;
+      }
+    },
+    injectStyles: function () {
+      var style = document.createElement('style');
+      style.textContent = styles;
+      document.head.appendChild(style);
+    },
+    create: function (selector, type) {
+      this.injectStyles();
+      this.container = document.querySelector(selector);
+      this.container.innerHTML = this.getTemplate(type);
+      this.el = this.container.querySelector('.ad__container');
       this.slider = slider;
       this.slider.ad = this;
       this.onWindowResize = this.onWindowResize.bind(this);
@@ -110,7 +142,7 @@ module.exports = (function () {
       this.tape.classList.toggle('tape--animated', state);
     },
     createSlides: function () {
-      IMAGES.forEach(function (src, index) {
+      data.images.forEach(function (src, index) {
         var slideEl = this.createSlide(src);
         var img = slideEl.querySelector('img');
         this.tape.appendChild(slideEl);
@@ -238,8 +270,7 @@ module.exports = (function () {
       this.slide(x);
     }
   };
-
+  
   UI.killDefaultDragDrop();
-
-  Ad.create();
+  Ad.create(containerSelector, type);
 });
