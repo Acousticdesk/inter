@@ -2,14 +2,7 @@
 // TODO: Encapsulate logic to modules
 module.exports = (function (mock) {
   'use strict';
-
-  // var IMAGES = [
-  //   "[[{"type":"banner","width":320,"height":480}]]",
-  //   "[[{"type":"banner","width":320,"height":480}]]",
-  //   "[[{"type":"banner","width":320,"height":480}]]"
-  // ];
-  // var TITLE = "[[{"type":"title"}]]";
-  // var RATING = "[[{"type":"rating"}]]";
+  
   var createDataFromMock = function (mock) {
     return mock;
   };
@@ -18,12 +11,12 @@ module.exports = (function (mock) {
     
     return {
       images: [
-        'http://wallpaperstock.net/banner-peak_wallpapers_27665_320x480.jpg',
-        'http://wallpaperstock.net/banner-peak_wallpapers_27665_320x480.jpg',
-        'http://wallpaperstock.net/banner-peak_wallpapers_27665_320x480.jpg'
+        "[[{"type":"banner","width":320,"height":480}]]",
+        "[[{"type":"banner","width":320,"height":480}]]",
+        "[[{"type":"banner","width":320,"height":480}]]"
       ],
-      title: 'Hello world!',
-      rating: 3
+      title: "[[{"type":"title"}]]",
+      rating: [[{"type":"rating"}]]
     };
   };
   
