@@ -1,11 +1,7 @@
 // TODO: Use ES6 syntax
 // TODO: Encapsulate logic to modules
-module.exports = (function (containerSelector, type, mock) {
+module.exports = (function (mock) {
   'use strict';
-  
-  var mainTemplate = require('../templates/main.html');
-  var styles = require('../css/styles.css');
-  var alternativeTemplate = require('../templates/alternative.html');
 
   // var IMAGES = [
   //   "[[{"type":"banner","width":320,"height":480}]]",
@@ -92,24 +88,8 @@ module.exports = (function (containerSelector, type, mock) {
     show: function () {
       this.el.style.opacity = 1;
     },
-    getTemplate: function (type) {
-      switch (type) {
-        case 'main':
-          return mainTemplate;
-        default:
-          return alternativeTemplate;
-      }
-    },
-    injectStyles: function () {
-      var style = document.createElement('style');
-      style.textContent = styles;
-      document.head.appendChild(style);
-    },
-    create: function (selector, type) {
-      this.injectStyles();
-      this.container = document.querySelector(selector);
-      this.container.innerHTML = this.getTemplate(type);
-      this.el = this.container.querySelector('.ad__container');
+    create: function () {
+      this.el = document.querySelector('.ad__container');
       this.slider = slider;
       this.slider.ad = this;
       this.onWindowResize = this.onWindowResize.bind(this);
@@ -272,5 +252,5 @@ module.exports = (function (containerSelector, type, mock) {
   };
   
   UI.killDefaultDragDrop();
-  Ad.create(containerSelector, type);
+  Ad.create();
 });
