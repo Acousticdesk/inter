@@ -1,26 +1,7 @@
 // TODO: Use ES6 syntax
 // TODO: Encapsulate logic to modules
-module.exports = (function (mock) {
+module.exports = (function (data) {
   'use strict';
-  
-  var createDataFromMock = function (mock) {
-    return mock;
-  };
-  var getData = function (mock) {
-    if (mock) return createDataFromMock();
-    
-    return {
-      images: [
-        "[[{"type":"banner","width":320,"height":480}]]",
-        "[[{"type":"banner","width":320,"height":480}]]",
-        "[[{"type":"banner","width":320,"height":480}]]"
-      ],
-      title: "[[{"type":"title"}]]",
-      rating: [[{"type":"rating"}]]
-    };
-  };
-  
-  var data = getData(mock);
 
   var helpers = {
     DOMCollectionApply: function (domCollection, cb) {
