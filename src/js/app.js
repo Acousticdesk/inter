@@ -1,14 +1,14 @@
 // TODO: Use ES6 syntax
 // TODO: Encapsulate logic to modules
-module.exports = (function (data) {
+var DIOInt = (function (data) {
   'use strict';
-
+  
   var helpers = {
     DOMCollectionApply: function (domCollection, cb) {
       Array.prototype.slice.call(domCollection).forEach(cb);
     }
   };
-
+  
   var UI = {
     isPortraitOrientation: function () {
       return window.innerHeight > window.innerWidth;
@@ -19,7 +19,7 @@ module.exports = (function (data) {
       };
     }
   };
-
+  
   var Ad = {
     enums: {
       STAR_CHECKED_CLASS: 'info__star--checked'
@@ -75,7 +75,7 @@ module.exports = (function (data) {
       this.slider.create();
     }
   };
-
+  
   var slider = {
     cache: {},
     currentSlideIndex: 0,
@@ -228,3 +228,13 @@ module.exports = (function (data) {
   UI.killDefaultDragDrop();
   Ad.create();
 });
+
+if (PRODUCTION) {
+  DIOInt({
+    images: [],
+    title: "",
+    rate: ""
+  });
+}
+
+module.exports = DIOInt;
