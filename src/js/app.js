@@ -62,12 +62,6 @@ var DIOInt = (function (data) {
     show: function () {
       this.el.style.opacity = 1;
     },
-    applyPreviewUrl: function () {
-      helpers.DOMCollectionApply(this.el.querySelectorAll('.dio-intint__cta'), function (link) {
-        console.log(data.previewurl);
-        link.href = data.previewurl;
-      });
-    },
     create: function () {
       this.el = document.querySelector('.dio-intint__container');
       this.slider = slider;
@@ -76,7 +70,6 @@ var DIOInt = (function (data) {
       this.delegateEvents();
       this.adjustForOrientation();
       this.initBanner();
-      this.applyPreviewUrl();
       this.applyTitle();
       this.applyRating();
       this.slider.create();
@@ -240,8 +233,7 @@ if (MARKETPLACE) {
   DIOInt({
     images: [],
     title: '',
-    rate: '',
-    previewurl: ''
+    rating: ''
   });
 } else if (DEVELOPMENT) {
   DIOInt({
@@ -251,8 +243,7 @@ if (MARKETPLACE) {
       'http://wallpaperstock.net/banner-peak_wallpapers_27665_320x480.jpg'
     ],
     title: 'Hello world!',
-    rating: 3,
-    previewurl: 'http://example.com'
+    rating: 3
   });
 }
 
