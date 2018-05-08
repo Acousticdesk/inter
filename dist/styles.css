@@ -1,4 +1,4 @@
-.wrapper {
+.dio-intint__wrapper {
     display: table;
     table-layout: fixed;
     width: 90%;
@@ -23,7 +23,7 @@
     display: none;
 }
 
-.ad {
+.dio-intint {
     display: table-cell;
     vertical-align: middle;
     padding: 5px 10px;
@@ -31,11 +31,11 @@
     position: relative;
 }
 
-.ad__banner {
+.dio-intint__banner {
     max-width: 100%;
 }
 
-.ad__slider {
+.dio-intint__slider {
     overflow: hidden;
     user-select: none;
 }
@@ -76,16 +76,16 @@
         opacity: 1;
     }
 
-.ad__container {
+.dio-intint__container {
     opacity: 0;
     margin: 0 auto;
 }
 
-.ad__info {
+.dio-intint__info {
     display: table;
 }
 
-    .ad__info--offset {
+    .dio-intint__info--offset {
         margin-top: 30px;
     }
 
@@ -116,7 +116,7 @@
         vertical-align: middle;
     }
 
-.ad__cta {
+.dio-intint__cta {
     background: #eb5033;
     display: block;
     color: #fff;
@@ -128,11 +128,11 @@
     font-weight: 600;
 }
 
-.ad__cta--offset {
+.dio-intint__cta--offset {
     margin-top: 20px;
 }
 
-.ad__cta--offset-small {
+.dio-intint__cta--offset-small {
     margin-top: 12px;
 }
 
@@ -146,7 +146,7 @@
     .info__text {
         font-size: 24px;
     }
-    .ad__cta {
+    .dio-intint__cta {
         font-size: 24px;
     }
     .landscape__col:last-of-type {
@@ -162,7 +162,7 @@
     .info__text {
         font-size: 16px;
     }
-    .ad__cta {
+    .dio-intint__cta {
         font-size: 18px;
     }
     .landscape__col:last-of-type {

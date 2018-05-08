@@ -63,7 +63,7 @@ var DIOInt = (function (data) {
       this.el.style.opacity = 1;
     },
     create: function () {
-      this.el = document.querySelector('.ad__container');
+      this.el = document.querySelector('.dio-intint__container');
       this.slider = slider;
       this.slider.ad = this;
       this.onWindowResize = this.onWindowResize.bind(this);
@@ -107,7 +107,7 @@ var DIOInt = (function (data) {
       var slideEl = document.createElement('div');
       var img = document.createElement('img');
       slideEl.classList.add('slider__slide');
-      img.classList.add('ad__banner');
+      img.classList.add('dio-intint__banner');
       img.src = src;
       slideEl.appendChild(img);
       return slideEl;
@@ -180,7 +180,7 @@ var DIOInt = (function (data) {
       this.onTouchend = this.onTouchend.bind(this);
     },
     create: function () {
-      this.el = document.querySelector('.ad__slider');
+      this.el = document.querySelector('.dio-intint__slider');
       this.bindContext();
       this.setTape();
       this.createSlides();
