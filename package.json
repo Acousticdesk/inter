@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:marketplace": "ENVIRONMENT=MARKETPLACE webpack --mode production",
+    "build:mp": "npm run build:marketplace",
     "build:dev": "ENVIRONMENT=DEVELOPMENT webpack --mode development",
     "build:npm": "webpack --mode production",
     "build": "npm run build:dev"
