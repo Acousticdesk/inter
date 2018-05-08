@@ -229,7 +229,7 @@ var DIOInt = (function (data) {
   Ad.create();
 });
 
-if (PRODUCTION) {
+if (MARKETPLACE || DEVELOPMENT) {
   DIOInt({
     images: [],
     title: "",

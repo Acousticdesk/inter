@@ -10,7 +10,8 @@ module.exports = [
     paths.css.styles
   ]),
   new webpack.DefinePlugin({
-    PRODUCTION: process.env.ENVIRONMENT === "PROD"
+    MARKETPLACE: process.env.ENVIRONMENT === "MARKETPLACE",
+    DEVELOPMENT: process.env.ENVIRONMENT === "DEVELOPMENT"
   })
   // new HtmlPlugin({
   //   inject: false,
