@@ -1,5 +1,3 @@
-// const CopyPlugin = require('copy-webpack-plugin');
-// const fs = require('fs');
 const paths = require('./paths/paths');
 const webpack = require('webpack');
 const HtmlWepbpackPlugin = require('html-webpack-plugin');
@@ -8,10 +6,6 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const templateState = process.env.TEMPLATE_STATE || 'main';
 
 module.exports = [
-  // new CopyPlugin([
-  //   //paths.templates.main,
-  //   paths.templates.alternative
-  // ]),
   new webpack.DefinePlugin({
     MARKETPLACE: process.env.ENVIRONMENT === 'MARKETPLACE',
     DEVELOPMENT: process.env.ENVIRONMENT === 'DEVELOPMENT',
@@ -25,5 +19,17 @@ module.exports = [
     filename: 'preview.html',
     template: paths.templates.preview,
     templateState
+  }),
+  new HtmlWepbpackPlugin({
+    inject: false,
+    filename: 'main.html',
+    template: paths.templates.main,
+    minify: true
+  }),
+  new HtmlWepbpackPlugin({
+    inject: false,
+    filename: 'alternative.html',
+    template: paths.templates.alternative,
+    minify: true
   })
 ];

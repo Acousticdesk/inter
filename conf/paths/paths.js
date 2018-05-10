@@ -11,8 +11,8 @@ module.exports = {
     styles: path.join(utils.getSrcPath(), 'css', 'styles.css')
   },
   templates: {
-    main: path.join(utils.getTemplatesPath(), 'main.html'),
-    alternative: path.join(utils.getTemplatesPath(), 'alternative.html'),
+    main: path.join(utils.getTemplatesPath(), 'main.ejs'),
+    alternative: path.join(utils.getTemplatesPath(), 'alternative.ejs'),
     preview: path.join(utils.getTemplatesPath(), 'preview.ejs')
   }
 };
