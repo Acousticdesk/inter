@@ -94,7 +94,7 @@
         color: #f1e5df;
     }
 
-    .info__star--checked {
+    .info__star.is-checked {
         color: #f19733;
     }
 

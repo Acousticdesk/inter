@@ -20,12 +20,13 @@
    justify-content: center;
    align-content: center;
    align-items: center;
+   overflow: scroll;
   }
  </style>
 </head>
 <body>
  <div class="website">
-  <%= require(`./${htmlWebpackPlugin.options.templateState}.html`) %>
+  <%= require('ejs-loader!./main.ejs')() %>
  </div>
  <script src="./bundle.js"></script>
 </body>
