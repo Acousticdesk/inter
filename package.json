@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:marketplace": "ENVIRONMENT=MARKETPLACE webpack --mode production",
+    "build:marketplace": "TEMPLATE_STATE=$npm_config_template ENVIRONMENT=MARKETPLACE webpack --mode production",
     "build:mp": "npm run build:marketplace",
-    "build:dev": "ENVIRONMENT=DEVELOPMENT webpack --mode development",
+    "build:dev": "TEMPLATE_STATE=$npm_config_template ENVIRONMENT=DEVELOPMENT webpack --mode development",
     "build:npm": "webpack --mode production",
     "build": "npm run build:dev"
   },
@@ -16,6 +16,7 @@
   "license": "ISC",
   "dependencies": {},
   "devDependencies": {
+    "better-npm-run": "^0.1.0",
     "copy-webpack-plugin": "^4.5.1",
     "css-loader": "^0.28.11",
     "html-loader": "^0.5.5",

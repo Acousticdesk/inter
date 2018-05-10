@@ -230,6 +230,16 @@ var DIOInt = (function (data) {
 });
 
 if (MARKETPLACE) {
+  // Production Assets (Can't be compiled with webpack. Should paste to already built js.)
+  
+  // images: [
+  //   "[[{"type":"banner","width":320,"height":480}]]",
+  //   "[[{"type":"banner","width":320,"height":480}]]",
+  //   "[[{"type":"banner","width":320,"height":480}]]"
+  // ],
+  //   title: "[[{"type":"title"}]]",
+  //   rating: "[[{"type":"rating"}]]",
+  //   thumbnail: "[[{"type":"thumbnail"}]]"
   DIOInt({
     images: [],
     title: '',
@@ -245,7 +255,7 @@ if (MARKETPLACE) {
     ],
     title: 'Hello world!',
     rating: 3,
-    thumbnail: ''
+    thumbnail: 'https://lh3.googleusercontent.com/sII1Lx4fumOCqgfWkkmv0hTk-AYNksaL4vZqWGOcthdiiGypNgg4inHFjmsVhoqliyk=s200-rw'
   });
 }
 
