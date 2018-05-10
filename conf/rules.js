@@ -2,9 +2,9 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = [
   {
-    test: /\.handlebars$/,
+    test: /\.js$/,
     exclude: /node_modules/,
-    use: 'handlebars-loader'
+    use: 'babel-loader'
   },
   {
     test: /\.html$/,
