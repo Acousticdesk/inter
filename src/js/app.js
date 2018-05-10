@@ -43,7 +43,7 @@ var DIOInt = (function (data) {
     },
     initBanner: function () {
       helpers.DOMCollectionApply(this.el.querySelectorAll('.info__img'), function (image) {
-        image.src = data.images[0];
+        image.src = data.thumbnail;
       });
     },
     applyTitle: function () {
@@ -233,7 +233,8 @@ if (MARKETPLACE) {
   DIOInt({
     images: [],
     title: '',
-    rating: ''
+    rating: '',
+    thumbnail: ''
   });
 } else if (DEVELOPMENT) {
   DIOInt({
@@ -243,7 +244,8 @@ if (MARKETPLACE) {
       'http://wallpaperstock.net/banner-peak_wallpapers_27665_320x480.jpg'
     ],
     title: 'Hello world!',
-    rating: 3
+    rating: 3,
+    thumbnail: ''
   });
 }
 
