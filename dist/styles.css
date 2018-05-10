@@ -154,18 +154,17 @@
     .landscape__col:last-of-type {
         padding-left: 50px;
     }
+    .info__img {
+        height: 80px;
+    }
+}
+
+@media screen and (orientation: landscape) {
     .mode--landscape {
         width: 100%;
         overflow: hidden;
         margin-top: 30px;
         display: table;
     }
-    .mode--alternative {
-        float: right;
-        width: 300px;
-        padding-left: 35px;
-    }
-    .info__img {
-        height: 80px;
-    }
 }
+

@@ -1,0 +1,10 @@
+@import './styles.css';
+
+@media screen and (orientation: landscape) {
+    .mode--landscape {
+        width: 100%;
+        overflow: hidden;
+        margin-top: 30px;
+        display: table;
+    }
+}

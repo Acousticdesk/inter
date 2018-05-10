@@ -1,0 +1,18 @@
+@import './styles.css';
+
+.mode--landscape {
+    width: 300px;
+    padding-left: 35px;
+}
+
+@media screen and (orientation: landscape) {
+    .dio-intint__container {
+        display: table;
+        width: 100%;
+    }
+    .dio-intint__slider,
+    .mode--landscape {
+        display: table-cell;
+        vertical-align: middle;
+    }
+}

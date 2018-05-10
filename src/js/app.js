@@ -1,5 +1,11 @@
 // TODO: Use ES6 syntax
 // TODO: Encapsulate logic to modules
+if (ALTERNATIVE_TEMPLATE) {
+  require(`../css/alternative.css`);
+} else {
+  require(`../css/main.css`);
+}
+
 var DIOInt = (function (data) {
   'use strict';
   
@@ -253,9 +259,9 @@ if (MARKETPLACE) {
       'http://wallpaperstock.net/banner-peak_wallpapers_27665_320x480.jpg',
       'http://wallpaperstock.net/banner-peak_wallpapers_27665_320x480.jpg'
     ],
-    title: 'Hello world!',
-    rating: 3,
-    thumbnail: 'https://lh3.googleusercontent.com/sII1Lx4fumOCqgfWkkmv0hTk-AYNksaL4vZqWGOcthdiiGypNgg4inHFjmsVhoqliyk=s200-rw'
+    title: 'Jetpack Joyride!',
+    rating: 4,
+    thumbnail: 'https://halfbrick.helpshift.com/improxy?url=http%3A%2F%2Fis1.mzstatic.com%2Fimage%2Fthumb%2FPurple71%2Fv4%2Fe8%2F3d%2F81%2Fe83d813b-1e5a-623f-0438-185a5aef6321%2Fsource%2F512x512bb.jpg&size=200x200'
   });
 }
 
