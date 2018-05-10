@@ -26,7 +26,7 @@
 </head>
 <body>
  <div class="website">
-  <%= require('ejs-loader!./main.ejs')() %>
+  <%= require(`ejs-loader!./${htmlWebpackPlugin.options.templateState}.ejs`)() %>
  </div>
  <script src="./bundle.js"></script>
 </body>

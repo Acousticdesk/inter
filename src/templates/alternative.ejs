@@ -1,38 +1,11 @@
 <div class="dio-intint__wrapper">
     <div class="dio-intint">
         <div class="dio-intint__container">
-            <div class="dio-intint__slider">
-                <div class="slider__tape">
-
-                </div>
-            </div>
-            <div class="mode--portrait">
-                <div class="dio-intint__info dio-intint__info--offset">
-                    <div class="info__col">
-                        <img
-                          class="info__img"
-                          alt="">
-                    </div>
-                    <div class="info__col">
-                        <p class="info__text">Lorem ipsum dolor sit amet.</p>
-                        <%= require('./star-rating.html') %>
-                    </div>
-                </div>
-                <a target="_blank" class="dio-intint__cta dio-intint__cta--offset" href="__CLICKURL__">Download for free!</a>
-            </div>
+            <%= require('./slider.html') %>
+            <%= require('ejs-loader!./portrait.ejs')() %>
             <div class="mode--landscape">
-                <div class="dio-intint__info">
-                    <div class="info__col">
-                        <img
-                          class="info__img"
-                          alt="">
-                    </div>
-                    <div class="info__col">
-                        <p class="info__text">Lorem ipsum dolor sit amet.</p>
-                        <%= require('./star-rating.html') %>
-                    </div>
-                </div>
-                <a target="_blank" class="dio-intint__cta dio-intint__cta--offset-small" href="__CLICKURL__">Download for free!</a>
+                <%= require('ejs-loader!./rating-block.ejs')() %>
+                <%= require('./download-btn.html') %>
             </div>
         </div>
     </div>
