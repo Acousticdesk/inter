@@ -7,4 +7,13 @@
         margin-top: 30px;
         display: table;
     }
+    .slider__slide img {
+        max-height: 50vh;
+    }
+}
+
+@media screen and (orientation: portrait) {
+    .slider__slide img {
+        max-height: 250px;
+    }
 }
