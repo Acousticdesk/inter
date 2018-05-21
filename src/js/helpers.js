@@ -3,7 +3,8 @@ export default {
     [...domCollection].forEach(cb);
   },
   getNWords (text, n) {
-    const str = text.split(' ').slice(0, n || 20).join(' ');
-    return `${str}...`;
+    const textArr = text.split(' ');
+    const str = textArr.slice(0, n || 20).join(' ');
+    return textArr.length > n ? `${str}...` : str;
   }
 };
