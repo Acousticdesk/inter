@@ -27,7 +27,8 @@ export default {
     helpers.DOMCollectionApply(this.el.querySelectorAll('.info__img'), (image) => image.src = this.data.thumbnail);
   },
   applyTitle () {
-    helpers.DOMCollectionApply(this.el.querySelectorAll('.info__text'), (titleEl) => titleEl.textContent = this.data.title);
+    helpers.DOMCollectionApply(this.el.querySelectorAll('.info__text'), (titleEl) =>
+      titleEl.textContent = helpers.getNWords(this.data.title));
   },
   applyRating () {
     helpers.DOMCollectionApply(this.el.querySelectorAll('[data-rating]'), (starEl, index) => {

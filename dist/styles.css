@@ -1,6 +1,7 @@
 .dio-intint__wrapper {
     max-width: 768px;
     margin: 0 auto;
+    font-size: 16px;
 }
 
 .dio-intint__wrapper * {
@@ -112,6 +113,7 @@
     text-decoration: none;
     border-radius: 5px;
     font-weight: 600;
+    min-width: 130px;
 }
 
 .dio-intint__cta--offset {
@@ -130,32 +132,32 @@
 
 @media screen and (orientation: portrait) {
     .info__text {
-        font-size: 24px;
+        font-size: 1.5em;
     }
     .dio-intint__cta {
-        font-size: 24px;
+        font-size: 1.5em;
     }
     .landscape__col:last-of-type {
         padding-left: 10px;
     }
 
     .info__img {
-        width: 80px;
+        height: 80px;
     }
 }
 
 @media screen and (orientation: landscape) {
     .info__text {
-        font-size: 16px;
+        font-size: 1em;
     }
     .dio-intint__cta {
-        font-size: 18px;
+        font-size: 1.125em;
     }
     .landscape__col:last-of-type {
         padding-left: 50px;
     }
     .info__img {
-        height: 80px;
+        height: 50px;
     }
 }
 
@@ -166,14 +168,27 @@
         margin-top: 30px;
         display: table;
     }
-    .slider__slide img {
-        max-height: 50vh;
-    }
 }
 
 @media screen and (orientation: portrait) {
     .slider__slide img {
-        max-height: 250px;
+        max-height: 40vh;
     }
+}
+
+@media screen and (max-width: 767px) {
+    .dio-intint__wrapper {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-height: 565px) {
+    .slider__slide img {
+        max-height: 50vh;
+    }
+    .dio-intint__wrapper {
+        font-size: 11px;
+    }
+    
 }
 

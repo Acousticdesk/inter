@@ -5,7 +5,7 @@
             <%= require('ejs-loader!./portrait.ejs')() %>
             <div class="mode--landscape">
                 <%= require('ejs-loader!./rating-block.ejs')() %>
-                <%= require('./download-btn.html') %>
+                <%= require('ejs-loader!./download-btn.ejs')({offset: true}) %>
             </div>
         </div>
     </div>
