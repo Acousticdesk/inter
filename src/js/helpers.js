@@ -4,7 +4,7 @@ export default {
   },
   getNWords (text, n) {
     const textArr = text.split(' ');
-    const str = textArr.slice(0, n || 20).join(' ');
+    const str = textArr.slice(0, n || 15).join(' ');
     return textArr.length > n ? `${str}...` : str;
   }
 };
