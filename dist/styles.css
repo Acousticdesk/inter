@@ -7,6 +7,18 @@ body {
     margin: 0 auto;
     font-size: 16px;
 }
+    
+    @media screen and (max-width: 768px) {
+        .dio-intint__wrapper {
+            font-size: 14px;
+        }
+    }
+    
+    @media screen and (max-width: 375px) {
+        .dio-intint__wrapper {
+            font-size: 12px;
+        }
+    }
 
 .dio-intint__wrapper * {
     margin: 0;
@@ -77,7 +89,7 @@ body {
 }
 
     .dio-intint__info--offset {
-        margin-top: 30px;
+        margin-top: 1.85em;
     }
 
     .info__text {
@@ -92,7 +104,7 @@ body {
     }
 
     .info__col:last-of-type {
-        padding-left: 20px;
+        padding-left: 1.25em;
     }
 
     .info__star {
@@ -112,7 +124,7 @@ body {
     display: block;
     color: #fff;
     text-align: center;
-    padding: 15px 20px;
+    padding: 0.9375em 1.25em;
     font-family: sans-serif;
     text-decoration: none;
     border-radius: 5px;
@@ -121,11 +133,11 @@ body {
 }
 
 .dio-intint__cta--offset {
-    margin-top: 20px;
+    margin-top: 1.25em;
 }
 
 .dio-intint__cta--offset-small {
-    margin-top: 12px;
+    margin-top: 0.75em;
 }
 
 .landscape__col {
@@ -142,11 +154,11 @@ body {
         font-size: 1.5em;
     }
     .landscape__col:last-of-type {
-        padding-left: 10px;
+        padding-left: 0.65em;
     }
 
     .info__img {
-        height: 80px;
+        height: 5em;
     }
 }
 
@@ -158,10 +170,10 @@ body {
         font-size: 1.125em;
     }
     .landscape__col:last-of-type {
-        padding-left: 50px;
+        padding-left: 3.125em;
     }
     .info__img {
-        height: 50px;
+        height: 3.125em;
     }
 }
 
@@ -169,7 +181,7 @@ body {
     .mode--landscape {
         width: 100%;
         overflow: hidden;
-        margin-top: 30px;
+        margin-top: 1.875em;
         display: table;
     }
 }
@@ -180,18 +192,9 @@ body {
     }
 }
 
-@media screen and (max-width: 767px) {
-    .dio-intint__wrapper {
-        font-size: 14px;
-    }
-}
-
 @media screen and (max-height: 565px) {
     .slider__slide img {
         max-height: 50vh;
-    }
-    .dio-intint__wrapper {
-        font-size: 11px;
     }
     
 }

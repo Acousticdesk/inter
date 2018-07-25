@@ -2,6 +2,11 @@ const paths = require('./paths/paths');
 const webpack = require('webpack');
 const HtmlWepbpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const colors = require('colors');
+
+if (!process.env.TEMPLATE_STATE) {
+	console.log('No template state was provided... Setting to default - main'.red);
+}
 
 const templateState = process.env.TEMPLATE_STATE || 'main';
 

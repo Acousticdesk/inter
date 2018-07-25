@@ -4,7 +4,7 @@
     .mode--landscape {
         width: 100%;
         overflow: hidden;
-        margin-top: 30px;
+        margin-top: 1.875em;
         display: table;
     }
 }
@@ -15,18 +15,9 @@
     }
 }
 
-@media screen and (max-width: 767px) {
-    .dio-intint__wrapper {
-        font-size: 14px;
-    }
-}
-
 @media screen and (max-height: 565px) {
     .slider__slide img {
         max-height: 50vh;
-    }
-    .dio-intint__wrapper {
-        font-size: 11px;
     }
     
 }
